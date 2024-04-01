@@ -31,8 +31,10 @@ const answer = uniqueUsers
   .sort((user1, user2) => user2.followers_count - user1.followers_count)
   .slice(0, 10)
   .map(
-    (user) => user.screen_name, // + " has " + user.followers_count + " followers.",
+    (user) => user.screen_name // + " has " + user.followers_count + " followers.",
   );
 console.log(answer);
 
 await client.close();
+
+// Query2: (10pts) Return the top 10 screen_names by their number of followers.

@@ -26,3 +26,5 @@ const sortedUsers = Array.from(user.entries()).sort((a, b) => b[1] - a[1]);
 console.log(sortedUsers.slice(0, 1));
 
 await client.close();
+
+// Query3: (10pts) Who is the person that got the most tweets?

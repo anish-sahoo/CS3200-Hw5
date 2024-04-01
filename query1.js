@@ -16,9 +16,10 @@ const answer = result.filter(
     !tweet.in_reply_to_user_id,
 );
 
-console.log(answer);
 console.log(
-  `Found ${answer.length} documents that are not retweets or replies.`,
+  `Found ${answer.length} tweets that are not retweets or replies.`,
 );
 
 await client.close();
+
+// Query1: (10pts) How many tweets are not retweets or replies? (hint the field retweeted_status contains an object when the tweet is a retweeet)

@@ -40,6 +40,7 @@ Array.from(user.entries()).forEach((user) => {
 });
 
 const averageRetweetCount = retweetCount / sortedUsers.length;
+console.log("Average retweet count:",averageRetweetCount);
 
 const usersWithAverage = sortedUsers.filter(
   (user) => user[1].retweetCount > averageRetweetCount,
@@ -49,3 +50,5 @@ usersWithAverage.sort((a, b) => b[1].retweetCount - a[1].retweetCount);
 console.log(usersWithAverage.slice(0, 10));
 
 await client.close();
+
+// Query4: (25pts) Who are the top 10 people that got more retweets in average, after tweeting more than 3 times
